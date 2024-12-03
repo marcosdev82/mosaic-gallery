@@ -1,0 +1,142 @@
+.section-gallery{ padding-top:30px;}
+.section-gallery .fotorama-thumbs {
+ 
+  display: none;
+}
+
+.img-grid-gallery {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1840px;
+  margin: 0 auto;
+}
+
+.img-grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.img-grid-item.bytwo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 25.64457%;
+  flex: 0 25.64457%;
+  min-width: 0;
+}
+
+.img-grid-item.byone {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 33.52500%;
+  flex: 0 33.52500%;
+  min-width: 0;
+}
+
+.img-grid-item.byfour {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 37.35218%;
+  flex: 0 37.35218%;
+  min-width: 0;
+}
+
+.img-grid-inner {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.img-grid-inner > .large {
+  width: 67.00143%;
+}
+
+.img-grid-inner > .small {
+  width: 28.40746%;
+}
+
+.img-grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-grid-item a {
+  display: inline-block;
+  position: relative;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 24px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+
+.img-grid-item a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(216, 216, 216, 0.65);
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  content: " ";
+  display: block;
+  opacity: 0;
+  z-index: 1;
+}
+
+.img-grid-item a::after {
+  content: "\f00e";
+  color: #1d1d1b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.img-grid-item a:hover::after,
+.img-grid-item a:hover::before {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-grid-item a {
+    font-size: 48px;
+  }
+}
+
+.fotorama--fullscreen,
+.fotorama-overlay {
+  background-color: rgba(29, 29, 27, 0.9);
+}
+
+.fullscreen,
+.fotorama--fullscreen .fotorama__stage,
+.fotorama--fullscreen .fotorama__nav{
+  background-color:transparent;
+}
+/* straight “close” icon instead of “cancel fullscreen” */
+
+.fotorama--fullscreen .fotorama__fullscreen-icon {
+  background-position: -64px 0;
+}
